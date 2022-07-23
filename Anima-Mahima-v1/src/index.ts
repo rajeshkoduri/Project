@@ -1,5 +1,5 @@
 import express from 'express'
-import resizeImages from './api/images/images';
+import resizeImages from './api/images/resizeImg';
 
 const app = express();
 const port = 3000;
@@ -9,6 +9,6 @@ app.listen(port, ()=> {
     
 })
 //resize images endpoint
-app.get('/api/images', resizeImages, (req,res)=>{
+app.use('/api/images', resizeImages, (req,res)=>{
     res.send(req.query);
 } )
