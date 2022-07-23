@@ -8,6 +8,6 @@ let height = req.query.height;
 
 console.log(`Filename: ${filename} \n Width: ${width} \n Height: ${height}`);
 
-}
+} 
 
 export default resizeImages;
