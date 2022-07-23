@@ -32,9 +32,9 @@ const resizeImages = async (
                 .toBuffer()
         );
     };
-    const __dirname = `G:/Rajesh/Udacity`;
-    const thumbPath = `/Project/Anima-Mahima-v1/assets/thumb/${delimitedFileName}_${_width}_${_height}.jpg`;
-    res.sendFile(__dirname + thumbPath);
+    const __dirname = `./`;
+    const thumbPath = `/assets/thumb/${delimitedFileName}_${_width}_${_height}.jpg`;
+    await res.sendFile(thumbPath,{root : __dirname});
 };
 
 export default resizeImages;
